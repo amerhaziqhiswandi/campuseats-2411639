@@ -1,0 +1,88 @@
+
+[
+    {
+        "id": "2411639-nasi-beriani-gam-power",
+        "name": "Nasi Beriani Gam Power",
+        "location": "Bandar Penggaram, Batu Pahat, Johor",
+        "openHours": "10:00 am - 10:00 pm",
+        "isOpen": true,
+        "menu": [
+            {"id": "2411639-nb-1", "name": "Nasi Beriani Ayam", "description": "golden-orange Basmathi rice, tender saucy spiced chicken, infused with aromatic spices, and a side of acar", "price": 10.99, "category": "Rice", "available": true},
+            {"id": "2411639-nb-2", "name": "Nasi Beriani Daging", "description": "golden-orange Basmathi rice, tender saucy spiced beef, infused with aromatic spices, and a side of acar", "price": 11.99, "category": "Rice", "available": true},
+            {"id": "2411639-nb-3", "name": "Nasi Beriani Kambing", "description": "golden-orange Basmathi rice, tender saucy spiced lamb, infused with aromatic spices, and a side of acar", "price": 12.99, "category": "Rice", "available": false},
+            {"id": "2411639-dr-1", "name": "Teh Ais", "description": "A refreshing glass of ice-cold tea", "price": 3.50, "category": "Drinks", "available": true},
+            {"id": "2411639-dr-2", "name": "Sirap Bandung", "description": "A sweet and fragrant rose-flavored drink", "price": 3.00, "category": "Drinks", "available": true},
+            {"id": "2411639-dr-3", "name": "Air Mineral", "description": "A bottle of mineral water", "price": 1.50, "category": "Drinks", "available": true},
+            {"id": "2411639-ds-1", "name": "Cendol", "description": "A sweet and refreshing dessert made with coconut milk and palm sugar", "price": 4.00, "category": "Desserts", "available": true},
+            {"id": "2411639-ds-2", "name": "Lai Chi Kang", "description": "A traditional sweet and refreshing herbal dessert and drink", "price": 5.00, "category": "Desserts", "available": true}
+        ]
+    },
+
+    {
+         "id": "2412941-kerabu-shack",
+        "name": "Kerabu Shack",
+        "location": "Mahallah Uthman, Block B",
+        "openHours": "9:00 am - 10:00 pm",
+        "isOpen": true,
+        "menu": [
+            { 
+                "id": "2412941-ks-1", 
+                "name": "Nasi Kerabu Ayam", 
+                "description": "Blue rice, salad and coconut flakes with fried chicken", 
+                "price": 6.5, 
+                "category": "Rice", 
+                "available": true 
+            },
+            { 
+                "id": "2412941-ks-2", 
+                "name": "Nasi Kerabu Lemak Bakar", 
+                "description": "Blue rice, salad and coconut flakes with grilled beef fat", 
+                "price": 8, 
+                "category": "Rice", 
+                "available": true 
+            },
+            { 
+                "id": "2412941-ks-3", 
+                "name": "Sirap Bandung Selasih", 
+                "description": "Rose syrup mixed with evaporated milk and basil seeds on ice", 
+                "price": 3.0, 
+                "category": "Drinks", 
+                "available": true 
+            }
+        ]
+    },
+
+    {
+        "id": "2419467-Nasi-Nukus",
+        "name": "Nasi Nukus",
+        "location": "Jalan Rabung, Bukit Jelutong, Shah Alam, Selangor",
+        "openHours": "10:00 am - 10:00 pm",
+        "isOpen": true,
+        "menu": [
+            { 
+                "id": "2419467-nk-1", 
+                "name": "Nasi Kukus Ayam", 
+                "description": "steamed rice, spiced fried chicken, curry gravy, and sambal belacan", 
+                "price": 6.5, 
+                "category": "Rice", 
+                "available": true 
+            },
+            { 
+                "id": "2419467-nk-2", 
+                "name": "Nasi Kukus Daging Kerutuk", 
+                "description": "steamed rice served with rich beef kerutuk gravy and sambal belacan ", 
+                "price": 7.5, 
+                "category": "Rice", 
+                "available": false 
+            },
+            { 
+                "id": "2419467-nk-3", 
+                "name": "Teh o Ais", 
+                "description": "ice tea", 
+                "price": 1.5, 
+                "category": "Drinks", 
+                "available": true 
+            }
+        ]
+    }
+]
