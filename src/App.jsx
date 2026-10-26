@@ -4,6 +4,7 @@ import VendorCard from './components/VendorCard.jsx'
 import MenuList from './components/MenuList.jsx'
 import Footer from './components/Footer.jsx'
 import CartPage from './components/CartPage.jsx'
+import RecentlyViewed from './components/RecentlyViewed.jsx'
 
 function Loading() {
   return (
@@ -63,6 +64,8 @@ function App() {
 
   //Cart Handlers
   function handleAddToCart(menuItem) {
+    handleViewItem(menuItem)
+
     setCart((prevCart) => {
       const existingIndex = prevCart.findIndex((line) => line.item.id === menuItem.id)
 
@@ -110,6 +113,19 @@ function App() {
     setLastOrder({ ...details, total: total.toFixed(2), pickupTime })
     setCart([])
     setView('done')
+  }
+
+  //Personal feature: Recently viewed items
+  const [recentlyViewed, setRecentlyViewed] = useState([])
+  function handleViewItem(item) {
+    setRecentlyViewed((prev) => {
+      const withoutCurrent = prev.filter((i) => i.id !== item.id)
+      return [item, ...withoutCurrent].slice(0, 5)
+    })
+  }
+
+  function handleClearRecentlyViewed() {
+    setRecentlyViewed([])
   }
 
   //Find active vendor
@@ -163,9 +179,20 @@ function App() {
         {selectedVendorId && (
           <section>
             <h2 className="section-title">Menu: {selectedVendor.name}</h2>
-            <MenuList items={selectedVendor.menu} onAdd={handleAddToCart} />
+            <MenuList 
+              items={selectedVendor.menu} 
+              onAdd={handleAddToCart} 
+              onViewItem={handleViewItem} 
+            />
           </section>
         )}
+        
+        {/* Personal Feature: Recently Viewed Items */}
+        <RecentlyViewed 
+          items={recentlyViewed} 
+          onClear={handleClearRecentlyViewed} 
+          onAdd={handleAddToCart} 
+        />
       </>
     )
   }
