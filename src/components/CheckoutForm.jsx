@@ -7,7 +7,9 @@ function validate(values) {
     const errors = {}
     if (values.name.trim().length < 3) errors.name = 'Enter your name (at least 3 characters).'
     if (!values.mahallah) errors.mahallah = 'Please select your mahallah.'
-    if (values.pickupTime && (values.pickupTime < '07:00' || values.pickupTime > '22:00')) {
+    if (!values.pickupTime) {
+        errors.pickupTime = 'Please select a pickup time.'
+    } else if (values.pickupTime < '07:00' || values.pickupTime > '22:00') {
         errors.pickupTime = 'Please select a time between 07:00 and 22:00.'
     }
     return errors
