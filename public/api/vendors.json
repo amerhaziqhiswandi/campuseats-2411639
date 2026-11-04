@@ -57,7 +57,7 @@
         "name": "Nasi Nukus",
         "location": "Jalan Rabung, Bukit Jelutong, Shah Alam, Selangor",
         "openHours": "10:00 am - 10:00 pm",
-        "isOpen": true,
+        "isOpen": false,
         "menu": [
             { 
                 "id": "2419467-nk-1", 

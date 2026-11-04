@@ -21,9 +21,15 @@ body { margin: 0; }
   background: var(--green);
   color: #fff;
 }
+
+.logo-link {                      /*Personal Adjustment(PA): to remove blue font color*/
+  text-decoration: none;
+  color: #fff;
+}
 .logo { margin: 0; font-size: 1.4rem; }
 .nav { display: flex; gap: 1.25rem; }
 .nav a { color: #fff; text-decoration: none; }
+.nav a.active { font-weight: 700; } /*PA: To add weight to the font on which page is active */
 .badge {
   background: #fff;
   color: var(--green);
@@ -42,9 +48,23 @@ body { margin: 0; }
   border-radius: var(--radius);
   padding: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  text-decoration: none;    /* PA: To remove the blue hyperlink color, */
+  color: inherit;           /* inherit color from surrounding context, */
+  display: block;           /* and ensuring it occupies full width. */
 }
 .card h2, .card h3 { margin: 0 0 0.25rem; }
-.vendor-card { display: flex; gap: 1rem; align-items: center; }
+.vendor-card { 
+  display: flex;                        /* PA: Removes the default browser underline, */
+  gap: 1rem;                            /* strips the hyperlink blue/purple text color*/
+  align-items: center; 
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid transparent;
+  transition: border-color 0.15s ease;
+}
+.vendor-card:hover { border-color: var(--green-light); }    /* PA: Changes border color on hover */
+.vendor-card.selected { border-color: var(--green); }       /* PA: Changes border color for selected vendor */
+
 .thumb {
   width: 64px; height: 64px; flex-shrink: 0;
   display: grid; place-items: center;
@@ -99,3 +119,9 @@ start; }
 .form input, .form select { padding: 0.5rem; border: 1px solid #c5cbd3; borderradius: 8px; font: inherit; }
 .field-error { color: #b3261e; font-size: 0.85rem; margin: 0; }
 .error { border-left: 4px solid #b3261e; }
+
+/* Week 4 additions */
+a {
+  color: var(--green);
+  text-decoration: none;
+}

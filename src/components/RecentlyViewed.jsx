@@ -1,7 +1,7 @@
 
 //Personal Feature: Recently viewed items
-function RecentlyViewed({ items, onClear, onAdd }) {
-  if (items.length === 0) return null
+function RecentlyViewed({ items = [], onClear, onAdd }) {
+  if (!items || items.length === 0) return null
 
   return (
     <section className="recently-viewed" style={{ marginTop: '2rem', padding: '1rem', borderTop: '1px solid #ddd' }}>
